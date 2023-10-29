@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:ital,wght@0,100;0,300;0,600;0,800;0,900;1,300&family=Roboto:wght@400;500&display=swap" rel="stylesheet">"
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <title>Restraunt Landing Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cedarville Cursive', cursive;
+            font-family: 'Poppins', sans-serif;
+            
+            
+        }
+        /* Base Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url(bg.jpg) no-repeat;
+            background-size:cover;
+            background-position: center;
+        }
+
+        #navbar li:first-child a {
+            display: flex;
+            align-items: center;
+        }
+
+        #navbar li:first-child img {
+            width: 50px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 500px; /* Add spacing between the logo and text */
+        }
+
+        .content{
+            margin-top: 100px;
+            margin-left: 20px;
+            max-width: 600px;
+            color: white;
+            
+        }
+        .content .info{
+            font-size: 55px;
+            font-weight: 100;
+            margin-bottom: 30px;
+            font-family: 'Allura', cursive;
+            font-family: 'Playfair Display', serif;
+            color: #ebb768;
+        }
+        .content .info h2 span{
+            color: #ff9900;
+            font-size: 100px;
+            font-weight: 600;
+            
+        }
+        .content .book-btn{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            color: white;
+            background: rgb(152, 137, 2);
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 10px 20px;
+            border-radius: 5px;
+
+        }
+        .content .book-btn:hover{
+            background:#ff9900; 
+        }
+        .content p{
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 100;
+            transition: background-color 0.3s;
+        }
+        .media-icons a{
+            font-size: 25px;
+            align-content: center;
+            letter-spacing: 25px;
+            
+        }
+        .media-icons{
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+        .media-icons a:hover{
+            transition:0.3s ease-in-out ;
+            font-size: 30px;
+        }
+    
+        #navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        #navbar li {
+            margin: 0;
+        }
+
+        #navbar a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            transition: color 0.3s;
+            font-size: 20px;
+        }
+
+        /* Change background and font color when scrolled */
+        #navbar.scrolled {
+            background-color: #555;
+        }
+
+        #navbar.scrolled a {
+            color: #fff;
+        }
+
+        /* Change font color on hover */
+        #navbar a:hover {
+            color: #ff9900;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+            <li><img src="logo2.jpg" alt="logonav"></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+    </div>
+    <div class="content">
+        <div class="info">
+            <h2>Enjoy Your<br><span>Royal Plate</span></h2>
+        </div>
+            <h1>OPENING HOURS</h1>
+            <p>Monday - Friday : 08:00AM - 11:00PM<br>Weekends : 08:00AM - 2:00PM</p>
+            <a href="#" class="book-btn">BOOK TABLE</a>
+            
+        
+    </div>
+    <div class="media-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
+    </div>
+
+    <!-- Content goes here -->
+    <div style="height: 1000px;"></div>
+
+    <script>
+        // JavaScript to handle the scrolling and color change
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
